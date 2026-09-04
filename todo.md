@@ -6,3 +6,5 @@
 - [x] Wire the real APK into the download constant and verify the download trigger.
 - [x] Run typecheck, production build, and responsive visual verification.
 - [ ] Save a new checkpoint and push the updated project to GitHub.
+
+- [x] Remove the Live availability snapshot section and verify the remaining page flow.
