@@ -1,0 +1,8 @@
+# EduSpace asset integration checklist
+
+- [x] Inspect the uploaded archive and identify the real logo, APK, and homepage image.
+- [x] Copy or upload the usable assets using the webdev asset workflow.
+- [x] Replace generated logo and app preview references with the real assets.
+- [x] Wire the real APK into the download constant and verify the download trigger.
+- [x] Run typecheck, production build, and responsive visual verification.
+- [ ] Save a new checkpoint and push the updated project to GitHub.
