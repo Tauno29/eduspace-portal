@@ -16,3 +16,7 @@
 - [x] Inspect and verify the latest uploaded APK metadata and checksum.
 - [x] Upload the latest APK and update the live download/QR target.
 - [x] Rebuild, verify the replacement asset, and save a new checkpoint.
+
+- [x] Copy the logo, homepage image, supporting visual assets, and latest APK into Netlify-public paths.
+- [x] Replace private Manus storage references with repository-relative URLs.
+- [x] Validate the built output contains every asset and update the deployment checkpoint.

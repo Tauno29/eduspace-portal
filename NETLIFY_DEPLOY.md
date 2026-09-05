@@ -14,11 +14,11 @@ EduSpace is a Vite-powered static React site prepared for Netlify. The repositor
 
 Connect the GitHub repository `Tauno29/eduspace-portal` in Netlify, select the `main` branch, and deploy. Netlify will read the repository configuration automatically. The site is frontend-only, so no database, server, or Netlify Functions configuration is required.
 
-## Important asset note
+## Asset handling
 
-The site currently references the real logo, app screenshot, generated visual assets, and APK through the managed `/manus-storage/...` URLs used by the Manus project. Those URLs are valid for the Manus-hosted preview and deployment lifecycle, but a standalone Netlify deployment should use assets hosted in a durable public bucket or committed to the deployment repository. Before the first Netlify production deploy, replace those managed URLs with permanent HTTPS asset URLs, especially the APK download URL.
+The real logo, app homepage screenshot, map texture, campus collage, and latest APK now live in `client/public/assets/`, so Netlify publishes them as stable repository-relative URLs under `/assets/`. The APK download target is centralized in `client/src/pages/Home.tsx` as `APK_DOWNLOAD_URL`, and the QR code is generated from that value at runtime.
 
-The APK download target is centralized in `client/src/pages/Home.tsx` as `APK_DOWNLOAD_URL`. Update that constant to the final public HTTPS APK URL for Netlify. The QR code is generated from that value at runtime, so it will follow the updated URL automatically.
+If you later move the assets to a separate public CDN, set the Netlify environment variable `VITE_ASSET_BASE_URL` to the CDN origin without a trailing slash. The same source code will then prefix the `/assets/...` paths with that origin.
 
 ## Validation
 
