@@ -155,7 +155,7 @@
 .hero-section { position: relative; min-height: 690px; overflow: hidden; background: var(--ink); color: #fff; }
 .hero-atmosphere { position: absolute; width: 670px; height: 670px; right: -120px; top: -240px; border-radius: 50%; background: radial-gradient(circle, rgba(92, 84, 239, 0.38) 0%, rgba(92,84,239,0.1) 38%, transparent 68%); pointer-events: none; }
 .hero-section::before { content: ""; position: absolute; inset: 0; opacity: .22; background-image: linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px); background-size: 66px 66px; mask-image: linear-gradient(90deg, black 0%, transparent 95%); pointer-events: none; }
-.hero-section::after { content: ""; position: absolute; inset: 0; opacity: .13; background-image: url("/assets/eduspace-namibia-map.png"); background-size: cover; background-position: center; mix-blend-mode: screen; pointer-events: none; }
+.hero-section::after { content: ""; position: absolute; inset: 0; opacity: .13; background-image: url("/assets/eduspace-namibia-map.webp"); background-size: cover; background-position: center; mix-blend-mode: screen; pointer-events: none; }
 .hero-grid { position: relative; z-index: 1; min-height: 595px; display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(430px, 1.05fr); gap: 30px; align-items: center; }
 .hero-copy { padding: 64px 0 26px; max-width: 620px; }
 .eyebrow { display: inline-flex; align-items: center; gap: 8px; color: rgba(21,27,46,0.55); font-size: 10px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
@@ -306,7 +306,7 @@
 .install-card::after { content: ""; position: absolute; width: 280px; height: 280px; margin-left: 58%; border-radius: 50%; border: 1px solid #e1ded5; box-shadow: 0 0 0 34px rgba(228,225,216,.35), 0 0 0 69px rgba(228,225,216,.22); }
 
 .regions-section { position: relative; overflow: hidden; background: var(--ink); color: #fff; }
-.regions-backdrop { position: absolute; inset: 0; opacity: .2; background-image: url("/assets/eduspace-namibia-map.png"); background-position: center; background-size: cover; mix-blend-mode: screen; }
+.regions-backdrop { position: absolute; inset: 0; opacity: .2; background-image: url("/assets/eduspace-namibia-map.webp"); background-position: center; background-size: cover; mix-blend-mode: screen; }
 .regions-section::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 80% 0%, rgba(116,93,239,.3), transparent 40%), linear-gradient(90deg, rgba(21,27,46,.55), rgba(21,27,46,.1)); }
 .regions-section .container { position: relative; z-index: 1; }
 .section-heading--regions { border-top-color: rgba(255,255,255,.18); }

@@ -16,4 +16,4 @@ The APK SHA-256 checksum is `50f031df8aeabde9458e7c636ea31583c04a8bee5261d7d1321
 
 ## Latest APK replacement
 
-The user supplied `application-139628a8-9fd5-4cd1-b67b-3c88cc15c93b.apk`, verified as an Android package of approximately 77 MB. Its SHA-256 checksum is `ebfafdab4c93f9a6a44c875fa77b1b1fb520d8c0456acc3de424013fe494d778`. It is uploaded at `/manus-storage/eduspace-latest_dd78eafc.apk` and is now the active download and QR target.
+The user supplied `application-139628a8-9fd5-4cd1-b67b-3c88cc15c93b.apk`, verified as an Android package of approximately 77 MB. Its SHA-256 checksum is `ebfafdab4c93f9a6a44c875fa77b1b1fb520d8c0456acc3de424013fe494d778`. It is published at `https://github.com/Tauno29/eduspace-portal/releases/download/v1.0.5/eduspace-latest.apk` and is now the active download and QR target for Netlify.

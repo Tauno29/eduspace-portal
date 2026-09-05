@@ -16,9 +16,9 @@ Connect the GitHub repository `Tauno29/eduspace-portal` in Netlify, select the `
 
 ## Asset handling
 
-The real logo, app homepage screenshot, map texture, campus collage, and latest APK now live in `client/public/assets/`, so Netlify publishes them as stable repository-relative URLs under `/assets/`. The APK download target is centralized in `client/src/pages/Home.tsx` as `APK_DOWNLOAD_URL`, and the QR code is generated from that value at runtime.
+The real logo, app homepage screenshot, map texture, and campus collage now live in `client/public/assets/`, so Netlify publishes them as stable repository-relative URLs under `/assets/`. The latest APK is distributed through the public [EduSpace GitHub Release](https://github.com/Tauno29/eduspace-portal/releases/tag/v1.0.5). The download target is centralized in `client/src/pages/Home.tsx` as `APK_DOWNLOAD_URL`, and the QR code is generated from that value at runtime.
 
-If you later move the assets to a separate public CDN, set the Netlify environment variable `VITE_ASSET_BASE_URL` to the CDN origin without a trailing slash. The same source code will then prefix the `/assets/...` paths with that origin.
+If you later move the image assets to a separate public CDN, set the Netlify environment variable `VITE_ASSET_BASE_URL` to the CDN origin without a trailing slash. The same source code will then prefix the `/assets/...` paths with that origin. If you move the APK, update `APK_DOWNLOAD_URL` and regenerate the QR target automatically through the next build.
 
 ## Validation
 
