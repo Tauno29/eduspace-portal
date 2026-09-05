@@ -32,7 +32,9 @@ import {
 import { toast } from "sonner";
 import { QRCodeSVG } from "qrcode.react";
 
-export const APK_DOWNLOAD_URL = "/manus-storage/eduspace-real_3314a64e.apk";
+const ASSET_BASE_URL = (import.meta.env.VITE_ASSET_BASE_URL || "").replace(/\/$/, "");
+const assetUrl = (path: string) => `${ASSET_BASE_URL}${path}`;
+export const APK_DOWNLOAD_URL = assetUrl("/manus-storage/eduspace-real_3314a64e.apk");
 const APK_SHA256 = "50f031df8aeabde9458e7c636ea31583c04a8bee5261d7d132102adc9ae3651a";
 
 const features = [
@@ -98,7 +100,7 @@ function Logo({ compact = false }: { compact?: boolean }) {
   return (
     <div className={`brand-lockup ${compact ? "brand-lockup--compact" : ""}`}>
       <div className="brand-mark" aria-hidden="true">
-        <img src="/manus-storage/eduspace-real-logo_7c8af88d.jpg" alt="" />
+        <img src={assetUrl("/manus-storage/eduspace-real-logo_7c8af88d.jpg")} alt="" />
       </div>
       <div className="brand-copy">
         <span className="brand-name">EduSpace</span>
@@ -152,7 +154,7 @@ function PhonePreview() {
         <span><strong>Verified schools</strong><br />Across 14 regions</span>
       </div>
       <div className="phone-shell phone-shell--real">
-        <img className="phone-homepage" src="/manus-storage/eduspace-real-homepage_d5da0a0a.jpeg" alt="EduSpace app homepage showing school regions and navigation" />
+        <img className="phone-homepage" src={assetUrl("/manus-storage/eduspace-real-homepage_d5da0a0a.jpeg")} alt="EduSpace app homepage showing school regions and navigation" />
       </div>
     </div>
   );
@@ -215,7 +217,7 @@ function App() {
 
         <section className="install-section section-space" id="install"><div className="container install-layout"><div className="install-intro"><div className="eyebrow"><span className="eyebrow-mark"><Download size={13} /></span> Ready in under a minute</div><h2>Three steps to a<br /><span>clearer search.</span></h2><p>Keep the process simple. Download the official build, give Android permission once, and start exploring open spaces.</p><a className="text-link" href="#faqs" onClick={(event) => { event.preventDefault(); scrollTo("faqs"); }}>Questions about the APK? <ArrowRight size={15} /></a></div><div className="steps-list"><div className="step-item step-item--active"><div className="step-number">01</div><div className="step-copy"><h3>Download APK</h3><p>Tap the download button and wait for the <code>.apk</code> file to save on your phone.</p></div><Download size={18} /></div><div className="step-item"><div className="step-number">02</div><div className="step-copy"><h3>Allow installation</h3><p>If prompted, tap <strong>Settings</strong> and toggle “Allow from this source”.</p></div><ShieldCheck size={18} /></div><div className="step-item"><div className="step-number">03</div><div className="step-copy"><h3>Open &amp; explore</h3><p>Launch EduSpace, choose your region, and start tracking open school spaces.</p></div><ArrowRight size={18} /></div></div><div className="install-card"><div className="install-card__copy"><div className="install-card__tag"><span /><span /> Direct download</div><h3>Have your phone<br />ready?</h3><p>Scan the code to keep the download moving on your mobile.</p><div className="install-card__hint"><QrCode size={15} /> Works best on Android Chrome</div></div><div className="qr-wrap"><MiniQr /><span>Scan to download</span></div></div></div></section>
 
-        <section className="proof-section section-space"><div className="container proof-layout"><div className="proof-visual"><img src="/manus-storage/eduspace-campus-collage_c2d652cf.png" alt="Editorial collage showing calm school spaces and campus details" /><div className="proof-stamp"><ShieldCheck size={18} /><span>Official<br /><strong>EduSpace</strong></span></div></div><div className="proof-copy"><div className="eyebrow"><span className="eyebrow-mark"><MessageCircle size={13} /></span> Built around the real question</div><blockquote>“Is there a place for my child — and what do I do next?”</blockquote><p>EduSpace brings the answer closer to home. One service for school availability, regional context, direct contacts, and the updates that matter when placement decisions are moving quickly.</p><div className="proof-signature"><div className="proof-signature__mark"><Logo compact /></div><span>For parents, learners<br />and educators across Namibia</span></div></div></div></section>
+        <section className="proof-section section-space"><div className="container proof-layout"><div className="proof-visual"><img src={assetUrl("/manus-storage/eduspace-campus-collage_c2d652cf.png")} alt="Editorial collage showing calm school spaces and campus details" /><div className="proof-stamp"><ShieldCheck size={18} /><span>Official<br /><strong>EduSpace</strong></span></div></div><div className="proof-copy"><div className="eyebrow"><span className="eyebrow-mark"><MessageCircle size={13} /></span> Built around the real question</div><blockquote>“Is there a place for my child — and what do I do next?”</blockquote><p>EduSpace brings the answer closer to home. One service for school availability, regional context, direct contacts, and the updates that matter when placement decisions are moving quickly.</p><div className="proof-signature"><div className="proof-signature__mark"><Logo compact /></div><span>For parents, learners<br />and educators across Namibia</span></div></div></div></section>
 
         <section className="faq-section section-space" id="faqs"><div className="container faq-layout"><div className="faq-aside"><div className="eyebrow"><span className="eyebrow-mark"><CircleHelp size={13} /></span> Need to know</div><h2>Questions,<br /><span>answered.</span></h2><p>If you are installing an APK for the first time, start here. The essentials are kept simple.</p><a href="#download" className="faq-download-link" onClick={(event) => { event.preventDefault(); scrollTo("download"); }}>Download EduSpace <ArrowRight size={15} /></a></div><div className="faq-list">{faqs.map((faq, index) => <div className={`faq-row ${openFaq === index ? "faq-row--open" : ""}`} key={faq.question}><button className="faq-trigger" onClick={() => setOpenFaq(openFaq === index ? -1 : index)} aria-expanded={openFaq === index}><span className="faq-number">0{index + 1}</span><span>{faq.question}</span><ChevronDown size={18} /></button>{openFaq === index && <div className="faq-answer"><p>{faq.answer}</p></div>}</div>)}</div></div></section>
 

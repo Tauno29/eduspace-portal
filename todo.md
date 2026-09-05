@@ -8,3 +8,7 @@
 - [ ] Save a new checkpoint and push the updated project to GitHub.
 
 - [x] Remove the Live availability snapshot section and verify the remaining page flow.
+
+- [x] Add Netlify build configuration and SPA fallback.
+- [x] Document Netlify deployment steps and asset limitations.
+- [x] Validate the Netlify production build and save a new checkpoint.
