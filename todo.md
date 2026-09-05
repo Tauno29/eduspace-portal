@@ -12,3 +12,7 @@
 - [x] Add Netlify build configuration and SPA fallback.
 - [x] Document Netlify deployment steps and asset limitations.
 - [x] Validate the Netlify production build and save a new checkpoint.
+
+- [x] Inspect and verify the latest uploaded APK metadata and checksum.
+- [x] Upload the latest APK and update the live download/QR target.
+- [x] Rebuild, verify the replacement asset, and save a new checkpoint.

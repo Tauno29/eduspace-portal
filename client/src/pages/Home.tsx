@@ -34,8 +34,8 @@ import { QRCodeSVG } from "qrcode.react";
 
 const ASSET_BASE_URL = (import.meta.env.VITE_ASSET_BASE_URL || "").replace(/\/$/, "");
 const assetUrl = (path: string) => `${ASSET_BASE_URL}${path}`;
-export const APK_DOWNLOAD_URL = assetUrl("/manus-storage/eduspace-real_3314a64e.apk");
-const APK_SHA256 = "50f031df8aeabde9458e7c636ea31583c04a8bee5261d7d132102adc9ae3651a";
+export const APK_DOWNLOAD_URL = assetUrl("/manus-storage/eduspace-latest_dd78eafc.apk");
+const APK_SHA256 = "ebfafdab4c93f9a6a44c875fa77b1b1fb520d8c0456acc3de424013fe494d778";
 
 const features = [
   {
