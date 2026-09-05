@@ -3,7 +3,7 @@
   warm ivory canvas, deep ink navigation, signal indigo actions, calm status cues,
   and purposeful asymmetry. Keep copy direct and interactions utility-like.
 */
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
   ArrowDownRight,
   ArrowRight,
@@ -163,11 +163,6 @@ function PhonePreview() {
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState(0);
-  const [isMobileBrowser, setIsMobileBrowser] = useState(false);
-
-  useEffect(() => {
-    setIsMobileBrowser(/Android|iPhone|iPad|iPod/i.test(navigator.userAgent));
-  }, []);
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -199,7 +194,7 @@ function App() {
               <h1>Find school places <em>in real time.</em></h1>
               <p className="hero-lede">Check available seats across all 14 regions from Grade 1 to 12, explore hostel &amp; boarding facilities, and receive instant school broadcast alerts directly on your phone.</p>
               <div className="hero-cta-row"><DownloadButton /><div className="safe-note"><ShieldCheck size={16} /><span><strong>Verified safe &amp; secure</strong><small>Built for Android 8.0+</small></span></div></div>
-              <div className="hero-meta"><span><strong>v1.0.4</strong> current release</span><i /> <span><strong>77 MB</strong> download size</span><i /> <span>{isMobileBrowser ? "Optimized for your phone" : "Mobile-first experience"}</span></div>
+              <div className="hero-meta"><span><strong>v1.0.4</strong> current release</span><i /> <span><strong>77 MB</strong> download size</span><i /> <span>Mobile-first experience</span></div>
             </div>
             <div className="hero-visual"><PhonePreview /></div>
           </div>

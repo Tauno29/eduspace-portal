@@ -20,3 +20,7 @@
 - [x] Copy the logo, homepage image, supporting visual assets, and latest APK into Netlify-public paths.
 - [x] Replace private Manus storage references with repository-relative URLs.
 - [x] Validate the built output contains every asset and update the deployment checkpoint.
+
+- [x] Inspect mobile overflow and unstable positioning.
+- [x] Apply viewport, sizing, and touch-layout fixes.
+- [x] Verify mobile/desktop screenshots and save a new checkpoint.
